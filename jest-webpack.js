@@ -21,7 +21,7 @@ function run(argv, webpackConfig) {
 
   if (!webpackConfig) {
     var webpackYargs = require('yargs/yargs')([]);
-    require('webpack/bin/config-yargs')(webpackYargs);
+    require('webpack-cli/bin/config-yargs')(webpackYargs);
     var webpackArgv = webpackYargs.parse(webpackArgvPortion);
     webpackConfig = require('webpack/bin/convert-argv')(
       webpackYargs, webpackArgv
